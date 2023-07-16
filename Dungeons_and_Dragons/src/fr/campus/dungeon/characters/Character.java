@@ -8,8 +8,8 @@ public class Character {
    private String characterType;
    private String name;
    private int lifePoints;
-   private String defaultOffensiveWeapon;
-   private String defensiveWeapon;
+   private OffensiveGear offensiveGear;
+   private DefensiveGear defensiveGear;
 
     // On crée le constructeur (on peut en avoir plusieurs dans une même class)
     public Character() {
@@ -26,14 +26,14 @@ public class Character {
 
         if (type.equals("Warrior")) {
             this.lifePoints = 10;
-            OffensiveGear attackStuff = new OffensiveGear("Senbonzakura", "Weapon", 10);
-            DefensiveGear defenseStuff = new DefensiveGear("Jadis", "Shield", 10);
+            this.offensiveGear = new OffensiveGear("Senbonzakura", "Weapon", 10);
+            this.defensiveGear = new DefensiveGear("Jadis", "Shield", 10);
         } else if (type.equals("Magician")) {
             this.lifePoints = 6;
-            OffensiveGear attackStuff = new OffensiveGear("Katon", "Spell", 15);
-            DefensiveGear defenseStuff = new DefensiveGear("Philtrum", "Philtre", 10);
+            this.offensiveGear = new OffensiveGear("Katon", "Spell", 15);
+            this.defensiveGear = new DefensiveGear("Philtrum", "Philtre", 10);
         } else {
-            System.out.println("Please chose between \"warrior\" and \"magician\"");
+            System.out.println("Please choose between \"Warrior\" and \"Magician\"");
         }
     }
 
@@ -59,6 +59,8 @@ public class Character {
                 "characterType='" + characterType + '\'' +
                 ", name='" + name + '\'' +
                 ", lifePoints=" + lifePoints +
+                ", offensiveGear=" + offensiveGear +
+                ", defensiveGear=" + defensiveGear +
                 '}';
     }
 }
