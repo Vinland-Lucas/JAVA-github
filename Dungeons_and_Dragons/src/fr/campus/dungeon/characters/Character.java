@@ -33,7 +33,7 @@ public class Character {
             this.offensiveGear = new OffensiveGear("Katon", "Spell", 15);
             this.defensiveGear = new DefensiveGear("Philtrum", "Philtre", 10);
         } else {
-            System.out.println("Please choose between \"Warrior\" and \"Magician\"");
+            System.out.println("PLEASE CHOOSE BETWEEN \"Warrior\" and \"Magician\"");
         }
     }
 

@@ -4,42 +4,59 @@ import java.util.Scanner; // Import the Scanner Class to read user input (entré
 import fr.campus.dungeon.characters.Character;
 
 public class Menu {
-    private int userChoice;
+    private String userChoice;
     private Character character;
     private String characterType;
     private String name;
+    Scanner menu = new Scanner(System.in);
 
     public Menu() {
-        Scanner menu = new Scanner(System.in);
-        System.out.println("Welcome to Dungeons & Dragons");
-        System.out.println("1. Create your character");
-        System.out.println("2. Show all character info");
-        System.out.println("3. Edit your character");
-        System.out.println("4. End the game");
 
-        System.out.println("Choose one of these options");
-        this.userChoice = menu.nextInt();
-        System.out.println("The player choose the option : " + userChoice);
+    }
 
-        if (userChoice == 1) {
-            // Cette ligne permet de générer un saut de ligne (\n) car lorsque l'on fait un nextLine() précédé d'un
-            // nextInt() et bien le nextInt() ne lira pas le saut de ligne. Il aurait fallut choisir l'option et le type
-            // du perso en un seul input.
-            // D'où le fait que ça sautait directement au "Enter your name" sans que j'ai écris le "type" de mon perso.
-            menu.nextLine();
+    public String displayMenu() {
+        System.out.println("\nWELCOME TO DUNGEONS & DRAGONS !\n");
+        System.out.println("1. Create your character\n" + "2. Show all character info\n" + "3. Edit your character\n" +"4. End the game\n");
+        this.userChoice = menu.nextLine();
 
-            System.out.println("Choose between \"Warrior\" and \"Magician\" : ");
-            this.characterType = menu.nextLine();
-            System.out.println(characterType);
+        return this.userChoice;
+    }
 
-            System.out.println("Enter your name : ");
-            this.name = menu.nextLine();
-            System.out.println(name);
+    public Character createCharacter() {
+        System.out.println("Choose between \"Warrior\" and \"Magician\" : ");
+        this.characterType = menu.nextLine();
+        System.out.println("Type : " + characterType + "\n");
 
-            this.character = new Character(characterType, name);
-            System.out.println(character);
-        }
+        System.out.println("Enter your name : ");
+        this.name = menu.nextLine();
+        System.out.println("Name : " + name + "\n");
 
+        this.character = new Character(characterType, name);
+        System.out.println("Here is your character's features :\n" + character);
+
+        return this.character;
+    }
+
+    public Character displayCharacter() {
+        this.character = new Character(characterType, name);
+        System.out.println("Here is your character's features :\n" + character);
+
+        return this.character;
+    }
+
+    public Character editCharacter() {
+        System.out.println("Let's modify your character");
+        this.characterType = menu.nextLine();
+        System.out.println("Type : " + characterType + "\n");
+
+        System.out.println("Enter your name : ");
+        this.name = menu.nextLine();
+        System.out.println("Name : " + name + "\n");
+
+        this.character = new Character(characterType, name);
+        System.out.println("Here is your character's features :\n" + character);
+
+        return this.character;
     }
     
 }

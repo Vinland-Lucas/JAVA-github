@@ -12,11 +12,10 @@ import fr.campus.dungeon.engine.Game;
 public class Main {
 
     public static void main(String[] args) {
-        // Character player = new Character("Warrior", "Lucas");
-        // System.out.println(player);
+        Game game = new Game();
+        System.out.println(game);
 
-        Menu menu = new Menu();
-        System.out.println(menu);
+        game.menuInteraction();
     }
 
 }
