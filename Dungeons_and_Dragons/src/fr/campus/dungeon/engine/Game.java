@@ -1,11 +1,11 @@
 package fr.campus.dungeon.engine;
 
 import fr.campus.dungeon.characters.Character;
-import fr.campus.dungeon.engine.Menu;
 
 public class Game {
     private Menu menu;
     private Character character;
+    private boolean isTrue = true;
 
     public Game() {
         this.menu = new Menu();
@@ -13,7 +13,7 @@ public class Game {
 
     public void menuInteraction() {
 
-        while(true) {
+        while(this.isTrue) {
             String chooseMenuOptions = menu.displayMenu();
 
             if (chooseMenuOptions.equals("1")) {
@@ -21,22 +21,21 @@ public class Game {
             } else if (chooseMenuOptions.equals("2") && this.character != null) {
                 menu.displayCharacter();
             } else if (chooseMenuOptions.equals("3") && this.character != null) {
-
-            } else if (chooseMenuOptions.equals("4")) {
-
-            }
-            else {
+                menu.editCharacter();
+            } else if (chooseMenuOptions.equals("4") && this.character != null) {
+                System.out.println("Let's get started !");
+                menu.playGame();
+                break;
+            } else if (chooseMenuOptions.equals("5")) {
+                this.isTrue = false;
+            } else {
                 System.out.println("My guy... you have to create your character !");
             }
         }
 
-
-      /*  if (menu.displayMenu() == "3" && menu.createCharacter() != null) {
-
-        }*/
-
-        //return ;
     }
+
+
 
 
 }
