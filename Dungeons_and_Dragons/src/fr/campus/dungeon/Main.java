@@ -17,12 +17,6 @@ public class Main {
         Game game = new Game();
         System.out.println(game);
 
-        Dice dice = new Dice();
-        System.out.println(dice);
-
-        Board board = new Board();
-        System.out.println(board);
-
         game.menuInteraction();
     }
 

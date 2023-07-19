@@ -86,7 +86,7 @@ public class Menu {
     public void playGame() {
         int boardLength = board.getBoardCells().length;
         this.playerPosition = 1;
-        System.out.println("You are on the " + this.playerPosition + " cell");
+        System.out.println("You are on the " + this.playerPosition + "st cell\n");
 
 
         while (this.playerPosition < boardLength) {
@@ -95,17 +95,17 @@ public class Menu {
 
             this.playerPosition = this.playerPosition + diceNumber;
             System.out.println("You are now on the " + this.playerPosition + "th cell\n");
-        }
 
-        if (this.playerPosition >= boardLength) {
-            System.out.println("CONGRATULATION !!! YOU WON !!!\n Wanna play again ? [Yes or No]");
-            this.userChoice = menu.nextLine();
-            if (this.userChoice.equals("Yes")) {
-                playGame();
+            if (this.playerPosition >= boardLength) {
+                System.out.println("CONGRATULATION !!! YOU WON !!!\n Wanna play again ? [Yes or No]");
+                this.userChoice = menu.nextLine();
+                if (this.userChoice.equals("Yes")) {
+                    playGame();
+                } else {
+                    break;
+                }
             }
         }
-
-
     }
 
 
