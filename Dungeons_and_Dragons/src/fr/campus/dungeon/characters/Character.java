@@ -3,7 +3,7 @@ package fr.campus.dungeon.characters;
 import fr.campus.dungeon.equipements.OffensiveGear;
 import fr.campus.dungeon.equipements.DefensiveGear;
 
-public class Character {
+public abstract class Character {
     // On crée les Instance Fields ou Instance Variables de notre class
    private String characterType;
    private String name;
@@ -26,12 +26,12 @@ public class Character {
 
         if (type.equals("Warrior")) {
             this.lifePoints = 10;
-            this.offensiveGear = new OffensiveGear("Senbonzakura", "Weapon", 10);
-            this.defensiveGear = new DefensiveGear("Jadis", "Shield", 10);
+            //this.offensiveGear = new OffensiveGear("Senbonzakura", "Weapon", 10);
+            //this.defensiveGear = new DefensiveGear("Jadis", "Shield", 10);
         } else if (type.equals("Magician")) {
             this.lifePoints = 6;
-            this.offensiveGear = new OffensiveGear("Katon", "Spell", 15);
-            this.defensiveGear = new DefensiveGear("Philtrum", "Philtre", 10);
+            //this.offensiveGear = new OffensiveGear("Katon", "Spell", 15);
+            //this.defensiveGear = new DefensiveGear("Philtrum", "Philtre", 10);
         } else {
             System.out.println("PLEASE CHOOSE BETWEEN \"Warrior\" and \"Magician\"");
         }
@@ -50,6 +50,27 @@ public class Character {
     }
     public void setName(String characterName) {
         this.name = characterName;
+    }
+
+    public int getLifePoints() {
+        return lifePoints;
+    }
+    public void setLifePoints(int lifePoints) {
+        this.lifePoints = lifePoints;
+    }
+
+    public OffensiveGear getOffensiveGear() {
+        return offensiveGear;
+    }
+    public void setOffensiveGear(OffensiveGear offensiveGear) {
+        this.offensiveGear = offensiveGear;
+    }
+
+    public DefensiveGear getDefensiveGear() {
+        return defensiveGear;
+    }
+    public void setDefensiveGear(DefensiveGear defensiveGear) {
+        this.defensiveGear = defensiveGear;
     }
 
     // On définit une méthode toString() sinon lors du print de notre objet la console renverra ClassName.adressmemory

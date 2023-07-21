@@ -37,14 +37,14 @@ public class Menu {
         this.name = menu.nextLine();
         System.out.println("Name : " + name + "\n");
 
-        this.character = new Character(characterType, name);
+        //this.character = new Character(characterType, name);
         System.out.println("Here is your character's features :\n" + character);
 
         return this.character;
     }
 
     public Character displayCharacter() {
-        this.character = new Character(characterType, name);
+        //this.character = new Character(characterType, name);
         System.out.println("Here is your character's features :\n" + character);
 
         return this.character;
@@ -53,7 +53,7 @@ public class Menu {
     public Character editCharacter() {
         System.out.println("Let's modify your character !\n");
 
-        this.character = new Character(characterType, name);
+        //this.character = new Character(characterType, name);
         System.out.println("Here is your actual character's features :\n" + character + "\n");
 
         System.out.println("Change your \"TYPE\" ? [Yes or No]");
@@ -62,7 +62,7 @@ public class Menu {
             System.out.println("Choose between \"Warrior\" and \"Magician\" : ");
             this.character.setCharacterType(this.characterType = menu.nextLine());
             System.out.println("Type : " + characterType + "\n");
-            this.character = new Character(character.getCharacterType(), name);
+            //this.character = new Character(character.getCharacterType(), name);
             System.out.println("Here is your new character's features :\n" + character + "\n");
         } else {
             System.out.println("Let's start the game !\n");
@@ -74,7 +74,7 @@ public class Menu {
             System.out.println("Enter your name : ");
             this.character.setName(this.name = menu.nextLine());
             System.out.println("Name : " + name + "\n");
-            this.character = new Character(character.getCharacterType(), character.getName());
+            //this.character = new Character(character.getCharacterType(), character.getName());
             System.out.println("Here is your new character's features :\n" + character + "\n");
         } else {
             System.out.println("Let's start the game !\n");

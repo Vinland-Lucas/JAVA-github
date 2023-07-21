@@ -1,6 +1,6 @@
 package fr.campus.dungeon.equipements;
 
-public class OffensiveGear {
+public abstract class OffensiveGear {
     // On crée les Instance Fields ou Instance Variables de notre class
     private String name;
     private String offensiveEquipment;

@@ -1,0 +1,7 @@
+package fr.campus.dungeon.equipements;
+
+public class Spell extends OffensiveGear {
+    public Spell(String spellsName, String attackingEquipment, int damage) {
+        super("Katon", "Spell", 15);
+    }
+}
