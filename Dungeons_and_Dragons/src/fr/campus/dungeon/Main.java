@@ -4,6 +4,7 @@ package fr.campus.dungeon;
 
 import java.util.Scanner; // Import the Scanner Class to read user input (entrée clavier)
 import fr.campus.dungeon.characters.Character;
+import fr.campus.dungeon.characters.Magician;
 import fr.campus.dungeon.characters.Warrior;
 import fr.campus.dungeon.engine.Board;
 import fr.campus.dungeon.equipements.OffensiveGear;
@@ -24,8 +25,9 @@ public class Main {
         System.out.println(warrior);
         System.out.println(warrior.getCharacterType());
 
-        Weapon weapon = new Weapon();
-        System.out.println(weapon);
+        Magician magician = new Magician("Magician", "Yuno");
+        System.out.println(magician);
+
     }
 
 }

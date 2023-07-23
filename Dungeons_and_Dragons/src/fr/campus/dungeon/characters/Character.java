@@ -37,6 +37,8 @@ public abstract class Character {
         }
     }
 
+    public abstract void characterFeatures();
+
     //On établit les getter et setter de chacun de nos "Instance Fields"
     public String getCharacterType() {
         return characterType;

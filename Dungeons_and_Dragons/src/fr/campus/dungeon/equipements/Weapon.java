@@ -5,8 +5,8 @@ import fr.campus.dungeon.characters.Magician;
 import fr.campus.dungeon.characters.Character;
 
 public class Weapon extends OffensiveGear {
-    public Weapon() {
-        super("Senbonzakura", "Weapon", 10);
+    public Weapon(String weaponsName, String attackingEquipment, int damage) {
+        super(weaponsName, attackingEquipment, damage);
     }
 
 }
