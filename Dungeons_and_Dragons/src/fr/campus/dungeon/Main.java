@@ -2,17 +2,7 @@
 // then press Enter. You can now see whitespace characters in your code.
 package fr.campus.dungeon;
 
-import java.util.Scanner; // Import the Scanner Class to read user input (entrée clavier)
-import fr.campus.dungeon.characters.Character;
-import fr.campus.dungeon.characters.Magician;
-import fr.campus.dungeon.characters.Warrior;
-import fr.campus.dungeon.engine.Board;
-import fr.campus.dungeon.equipements.OffensiveGear;
-import fr.campus.dungeon.equipements.DefensiveGear;
-import fr.campus.dungeon.engine.Menu;
 import fr.campus.dungeon.engine.Game;
-import fr.campus.dungeon.engine.Dice;
-import fr.campus.dungeon.equipements.Weapon;
 
 public class Main {
 

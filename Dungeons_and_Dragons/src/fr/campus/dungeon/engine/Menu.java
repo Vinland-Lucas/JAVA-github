@@ -5,6 +5,8 @@ import java.lang.System;
 import fr.campus.dungeon.characters.Character;
 import fr.campus.dungeon.characters.Magician;
 import fr.campus.dungeon.characters.Warrior;
+import fr.campus.dungeon.plateau.Board;
+import fr.campus.dungeon.plateau.Dice;
 
 public class Menu {
     private String userChoice;
@@ -84,7 +86,7 @@ public class Menu {
     }
 
     public void playGame() {
-        int boardLength = this.board.getBoardCells().length;
+        int boardLength = this.board.getBoardCells().size();
         this.playerPosition = 1;
         System.out.println("You are on the " + this.playerPosition + "st cell\n");
 
