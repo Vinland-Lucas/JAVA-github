@@ -14,6 +14,7 @@ public class Magician extends Character{
 
     public void characterFeatures() {
         setLifePoints(5);
+        setStrength(15);
         setOffensiveGear(new Spell("Katon", "Spell", 15));
         setDefensiveGear(new Philter("Philtrum", "Philtre", 10));
     }

@@ -17,16 +17,16 @@ import fr.campus.dungeon.equipements.Weapon;
 public class Main {
 
     public static void main(String[] args) {
-//        Game game = new Game();
-//        System.out.println(game);
-//        game.menuInteraction();
+        Game game = new Game();
+        System.out.println(game);
+        game.menuInteraction();
 
-        Warrior warrior = new Warrior("Warrior", "Lucas");
-        System.out.println(warrior);
-        System.out.println(warrior.getCharacterType());
-
-        Magician magician = new Magician("Magician", "Yuno");
-        System.out.println(magician);
+//        Warrior warrior = new Warrior("Warrior", "Lucas");
+//        System.out.println(warrior);
+//        System.out.println(warrior.getCharacterType());
+//
+//        Magician magician = new Magician("Magician", "Yuno");
+//        System.out.println(magician);
 
     }
 

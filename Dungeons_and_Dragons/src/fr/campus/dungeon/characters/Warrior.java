@@ -13,6 +13,7 @@ public class Warrior extends Character {
 
     public void characterFeatures() {
         setLifePoints(10);
+        setStrength(10);
         setOffensiveGear(new Weapon("Senbonzakura", "Weapon", 10));
         setDefensiveGear(new Shield("Jadis", "Shield", 10));
     }

@@ -8,6 +8,7 @@ public abstract class Character {
    private String characterType;
    private String name;
    private int lifePoints;
+   private int strength;
    private OffensiveGear offensiveGear;
    private DefensiveGear defensiveGear;
 
@@ -24,17 +25,17 @@ public abstract class Character {
         this.characterType = type;
         this.name = characterName;
 
-        if (type.equals("Warrior")) {
-            this.lifePoints = 10;
-            //this.offensiveGear = new OffensiveGear("Senbonzakura", "Weapon", 10);
-            //this.defensiveGear = new DefensiveGear("Jadis", "Shield", 10);
-        } else if (type.equals("Magician")) {
-            this.lifePoints = 6;
-            //this.offensiveGear = new OffensiveGear("Katon", "Spell", 15);
-            //this.defensiveGear = new DefensiveGear("Philtrum", "Philtre", 10);
-        } else {
-            System.out.println("PLEASE CHOOSE BETWEEN \"Warrior\" and \"Magician\"");
-        }
+//        if (type.equals("Warrior")) {
+//            this.lifePoints = 10;
+//            //this.offensiveGear = new OffensiveGear("Senbonzakura", "Weapon", 10);
+//            //this.defensiveGear = new DefensiveGear("Jadis", "Shield", 10);
+//        } else if (type.equals("Magician")) {
+//            this.lifePoints = 6;
+//            //this.offensiveGear = new OffensiveGear("Katon", "Spell", 15);
+//            //this.defensiveGear = new DefensiveGear("Philtrum", "Philtre", 10);
+//        } else {
+//            System.out.println("PLEASE CHOOSE BETWEEN \"Warrior\" and \"Magician\"");
+//        }
     }
 
     public abstract void characterFeatures();
@@ -61,6 +62,13 @@ public abstract class Character {
         this.lifePoints = lifePoints;
     }
 
+    public int getStrength() {
+        return strength;
+    }
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
     public OffensiveGear getOffensiveGear() {
         return offensiveGear;
     }
@@ -82,6 +90,7 @@ public abstract class Character {
                 "characterType='" + characterType + '\'' +
                 ", name='" + name + '\'' +
                 ", lifePoints=" + lifePoints +
+                ", strength=" + strength +
                 ", offensiveGear=" + offensiveGear +
                 ", defensiveGear=" + defensiveGear +
                 '}';

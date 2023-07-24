@@ -3,6 +3,8 @@ package fr.campus.dungeon.engine;
 import java.util.Scanner; // Import the Scanner Class to read user input (entrée clavier)
 import java.lang.System;
 import fr.campus.dungeon.characters.Character;
+import fr.campus.dungeon.characters.Magician;
+import fr.campus.dungeon.characters.Warrior;
 
 public class Menu {
     private String userChoice;
@@ -37,14 +39,12 @@ public class Menu {
         this.name = menu.nextLine();
         System.out.println("Name : " + name + "\n");
 
-        //this.character = new Character(characterType, name);
-        System.out.println("Here is your character's features :\n" + character);
+        displayCharacterFeatures();
 
         return this.character;
     }
 
     public Character displayCharacter() {
-        //this.character = new Character(characterType, name);
         System.out.println("Here is your character's features :\n" + character);
 
         return this.character;
@@ -53,7 +53,6 @@ public class Menu {
     public Character editCharacter() {
         System.out.println("Let's modify your character !\n");
 
-        //this.character = new Character(characterType, name);
         System.out.println("Here is your actual character's features :\n" + character + "\n");
 
         System.out.println("Change your \"TYPE\" ? [Yes or No]");
@@ -61,9 +60,10 @@ public class Menu {
         if (this.userChoice.equals("Yes")) {
             System.out.println("Choose between \"Warrior\" and \"Magician\" : ");
             this.character.setCharacterType(this.characterType = menu.nextLine());
-            System.out.println("Type : " + characterType + "\n");
-            //this.character = new Character(character.getCharacterType(), name);
-            System.out.println("Here is your new character's features :\n" + character + "\n");
+            System.out.println("Type : " + this.characterType + "\n");
+            // this.character = new Character(character.getCharacterType(), name);
+           // System.out.println("Here is your new character's features :\n" + character + "\n");
+            newCharacterFeatures();
         } else {
             System.out.println("Let's start the game !\n");
         }
@@ -73,7 +73,7 @@ public class Menu {
         if (this.userChoice.equals("Yes") && this.characterType != null) {
             System.out.println("Enter your name : ");
             this.character.setName(this.name = menu.nextLine());
-            System.out.println("Name : " + name + "\n");
+            System.out.println("Name : " + this.name + "\n");
             //this.character = new Character(character.getCharacterType(), character.getName());
             System.out.println("Here is your new character's features :\n" + character + "\n");
         } else {
@@ -84,13 +84,13 @@ public class Menu {
     }
 
     public void playGame() {
-        int boardLength = board.getBoardCells().length;
+        int boardLength = this.board.getBoardCells().length;
         this.playerPosition = 1;
         System.out.println("You are on the " + this.playerPosition + "st cell\n");
 
 
         while (this.playerPosition < boardLength) {
-            int diceNumber = dice.rollDice();
+            int diceNumber = this.dice.rollDice();
             System.out.println("*Roll the dice*\n" + "Number : " + diceNumber + "\nYou advance " + diceNumber + " cells");
 
             this.playerPosition = this.playerPosition + diceNumber;
@@ -106,6 +106,30 @@ public class Menu {
                 }
             }
         }
+    }
+
+    public void displayCharacterFeatures() {
+        if (this.characterType.equals("Warrior")) {
+            this.character = new Warrior(this.characterType, this.name);
+        } else if (this.characterType.equals("Magician")) {
+            this.character = new Magician(this.characterType, this.name);
+        } else {
+            System.out.println("*** ERROR ***\nPLEASE CHOOSE BETWEEN \"Warrior\" and \"Magician\"");
+        }
+
+        System.out.println("Here is your character's features :\n" + this.character);
+    }
+
+    public void newCharacterFeatures() {
+        if (this.characterType.equals("Warrior")) {
+            this.character = new Warrior(this.character.getCharacterType(), this.name);
+        } else if (this.characterType.equals("Magician")) {
+            this.character = new Magician(this.character.getCharacterType(), this.name);
+        } else {
+            System.out.println("*** ERROR ***\nPLEASE CHOOSE BETWEEN \"Warrior\" and \"Magician\"");
+        }
+
+        System.out.println("Here is your new character's features :\n" + character + "\n");
     }
 
 
