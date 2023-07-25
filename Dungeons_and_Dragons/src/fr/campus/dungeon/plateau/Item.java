@@ -3,6 +3,8 @@ package fr.campus.dungeon.plateau;
 import java.util.Random;
 
 public class Item implements Case {
+    private int item;
+
     public Item() {
         display();
     }
@@ -11,11 +13,12 @@ public class Item implements Case {
 
     }
 
+    @Override
     public void display() {
         Random random = new Random();
-        int item = random.nextInt(4) + 1;
+        this.item = random.nextInt(4) + 1;
 
-        switch (item) {
+        switch (this.item) {
             case 1:
                 createItem("Demon Dweller", "Weapon", 30);
                 break;
@@ -30,4 +33,19 @@ public class Item implements Case {
         }
     }
 
+    //On établit les getter et setter de chacun de nos "Instance Fields"
+    public int getItem() {
+        return item;
+    }
+    public void setItem(int item) {
+        this.item = item;
+    }
+
+    // On définit une méthode toString() sinon lors du print de notre objet la console renverra ClassName.adressmemory
+    @Override
+    public String toString() {
+        return "Item{" +
+                "item=" + item +
+                '}';
+    }
 }

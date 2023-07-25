@@ -16,6 +16,7 @@ public class Board implements Case {
         System.out.println(boardCells);
     }
 
+    @Override
     public void display() {
         this.boardCells = new ArrayList<Case>();
         boardCells.add(new EmptyCase());

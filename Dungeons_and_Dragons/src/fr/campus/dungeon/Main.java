@@ -3,6 +3,7 @@
 package fr.campus.dungeon;
 
 import fr.campus.dungeon.engine.Game;
+import fr.campus.dungeon.plateau.*;
 
 public class Main {
 
@@ -10,6 +11,21 @@ public class Main {
         Game game = new Game();
         System.out.println(game);
         game.menuInteraction();
+
+//        Board board = new Board();
+//        System.out.println(board);
+
+//        EmptyCase emptyCase = new EmptyCase();
+//        System.out.println(emptyCase);
+//
+//        Enemy enemy = new Enemy();
+//        System.out.println(enemy);
+//
+//        Item item = new Item();
+//        System.out.println(item);
+//
+//        Potion potion = new Potion();
+//        System.out.println(potion);
 
 //        Warrior warrior = new Warrior("Warrior", "Lucas");
 //        System.out.println(warrior);

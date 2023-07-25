@@ -86,20 +86,35 @@ public class Menu {
     }
 
     public void playGame() {
+        int i = 0;
         int boardLength = this.board.getBoardCells().size();
-        this.playerPosition = 1;
-        System.out.println("You are on the " + this.playerPosition + "st cell\n");
+        this.playerPosition = 0;
+        System.out.println("The wind blows... You're standing in front of the dungeon entrance\nPrepare for battle ! ");
 
 
         while (this.playerPosition < boardLength) {
             int diceNumber = this.dice.rollDice();
-            System.out.println("*Roll the dice*\n" + "Number : " + diceNumber + "\nYou advance " + diceNumber + " cells");
+            System.out.println("\n*Roll the dice*\n" + "Number : " + diceNumber + "\nYou advance " + diceNumber + " cells");
 
             this.playerPosition = this.playerPosition + diceNumber;
-            System.out.println("You are now on the " + this.playerPosition + "th cell\n");
+            System.out.println("You are now on the cell number : " + this.playerPosition);
+            // for (int i = 0; i < boardLength; i += diceNumber) {
+            // }
+
+            if (this.playerPosition == 1) {
+                System.out.println(this.board.getBoardCells().get(i));
+            } else if (this.playerPosition == 2) {
+                System.out.println(this.board.getBoardCells().get(i));
+            } else if (this.playerPosition == 3) {
+                System.out.println(this.board.getBoardCells().get(i));
+            } else if (this.playerPosition == 4) {
+                System.out.println(this.board.getBoardCells().get(i));
+            } else {
+                System.out.println("*** ERROR ***\nYOU'RE OUT OF BOUNDS");
+            }
 
             if (this.playerPosition >= boardLength) {
-                System.out.println("CONGRATULATION !!! YOU WON !!!\n Wanna play again ? [Yes or No]");
+                System.out.println("\nCONGRATULATION !!! YOU WON !!!\n Wanna play again ? [Yes or No]");
                 this.userChoice = menu.nextLine();
                 if (this.userChoice.equals("Yes")) {
                     playGame();
@@ -107,6 +122,8 @@ public class Menu {
                     break;
                 }
             }
+
+            i++;
         }
     }
 
