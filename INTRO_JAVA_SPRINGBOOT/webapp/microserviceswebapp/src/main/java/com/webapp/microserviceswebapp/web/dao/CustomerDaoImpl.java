@@ -58,5 +58,16 @@ public class CustomerDaoImpl implements CustomerDao {
         updateClient.setDriverLicenseNumber(customer.getDriverLicenseNumber());
 
         return updateClient;
+
+        /* It also works with this code
+        for (int i = 0; i < customers.size(); i++) {
+            Customer c = customers.get(i);
+
+            if(c.getId() == id) {
+                customers.set(i, customer);
+            }
+        }
+        return customer;
+        */
     }
 }
