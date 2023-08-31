@@ -32,5 +32,8 @@ public class CustomerController {
         customerDao.save(customer);
     }
 
-
+    @PutMapping("/customers/{id}")
+    public void modifierUnClient(@PathVariable int id, @RequestBody Customer customer) {
+        customerDao.update(id, customer);
+    }
 }

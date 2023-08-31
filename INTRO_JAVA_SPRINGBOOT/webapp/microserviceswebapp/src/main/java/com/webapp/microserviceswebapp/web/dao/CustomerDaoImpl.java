@@ -37,5 +37,26 @@ public class CustomerDaoImpl implements CustomerDao {
     public Customer save(Customer customer) { // méthode permettant d'ajouter un client à notre liste de client "customers"
         customers.add(customer); // customer --> Customer customer = new Customer()
         return customer;
+
+//        Customer customer = new Customer();
+//        customer.setId(c.getId());
+//        customer.setName(c.getName());
+//        customer.setFirstname(c.getFirstname());
+//        customer.setBirthday(c.getBirthday());
+//        customer.setDriverLicenseNumber(c.getDriverLicenseNumber());
+//        customers.add(customer);
+//        return customer;
+    }
+
+    @Override
+    public Customer update(int id, Customer customer) {
+        Customer updateClient = findById(id);
+
+        updateClient.setName(customer.getName());
+        updateClient.setFirstname(customer.getFirstname());
+        updateClient.setBirthday(customer.getBirthday());
+        updateClient.setDriverLicenseNumber(customer.getDriverLicenseNumber());
+
+        return updateClient;
     }
 }
