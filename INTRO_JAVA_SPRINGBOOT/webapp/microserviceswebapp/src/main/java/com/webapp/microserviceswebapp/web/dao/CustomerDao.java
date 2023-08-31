@@ -9,4 +9,5 @@ public interface CustomerDao {
     Customer findById(int id);
     Customer save(Customer customer);
     Customer update(int id, Customer customer);
+    Customer deleteById(int id);
 }

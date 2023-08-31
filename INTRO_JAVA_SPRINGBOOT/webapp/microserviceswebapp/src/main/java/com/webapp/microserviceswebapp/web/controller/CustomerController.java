@@ -36,4 +36,9 @@ public class CustomerController {
     public void modifierUnClient(@PathVariable int id, @RequestBody Customer customer) {
         customerDao.update(id, customer);
     }
+
+    @DeleteMapping("customers/{id}")
+    public void supprimerUnClient (@PathVariable int id) {
+        customerDao.deleteById(id);
+    }
 }

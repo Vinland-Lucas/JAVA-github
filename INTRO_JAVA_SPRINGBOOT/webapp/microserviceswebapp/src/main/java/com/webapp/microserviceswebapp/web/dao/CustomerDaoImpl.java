@@ -70,4 +70,15 @@ public class CustomerDaoImpl implements CustomerDao {
         return customer;
         */
     }
+
+    @Override
+    public Customer deleteById(int id) {
+        Customer deleteClient = findById(id);
+
+        if (deleteClient.getId() == id) {
+            customers.remove(deleteClient);
+        }
+
+        return deleteClient;
+    }
 }
