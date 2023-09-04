@@ -1,6 +1,7 @@
 # JAVA - SpringBoot
 
 Source :<br>
+- Top 1 : https://github.com/RomainWirth/RomainWirth/blob/main/java_springboot/java_springboot.md
 - https://easypartner.fr/blog/quest-ce-que-java-spring-boot/#:~:text=SpringBoot%20est%20un%20framework%20Java,qui%20%22fonctionnent%20tout%20simplement%22.
 - https://openclassrooms.com/fr/courses/4668056-construisez-des-microservices/7651525-decouvrez-le-framework-spring-boot
 
@@ -29,3 +30,11 @@ En bref, c'est une extension du framework Spring, qui permet de créer des appli
 ### - Understand getForObject() method from the Spring RestTemplate class
 ##### Liens :
 - https://www.concretepage.com/spring-5/spring-resttemplate-getforobject
+
+## Accessing data with MySQL
+#### Liens Tuto :
+- https://spring.io/guides/gs/accessing-data-mysql/
+
+## En savoir plus sur les Annotations JPA
+#### Liens :
+- https://gayerie.dev/epsi-b3-orm/javaee_orm/jpa_entites.html
