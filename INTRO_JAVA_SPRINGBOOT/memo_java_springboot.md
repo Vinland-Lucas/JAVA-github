@@ -12,6 +12,13 @@ SpringBoot est un framework de JAVA(en réalité issu du framework Spring), souv
 En bref, c'est une extension du framework Spring, qui permet de créer des applications Spring autonomes et de qualité production avec un minimum d'effort.
 ```
 
+## Cours sur les microservices en SpringBoot
+#### Quickstart : https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x&pp=iAQB
+#### Playlist 1 : https://www.youtube.com/watch?v=y8IQb4ofjDo&list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas&pp=iAQB
+#### Playlist 2 : https://www.youtube.com/watch?v=o8RO38KbWvA&list=PLqq-6Pq4lTTbXZY_elyGv7IkKrfkSrX5e&pp=iAQB
+#### Playlist 3 : https://www.youtube.com/watch?v=upoIwn4rWCo&list=PLqq-6Pq4lTTaoaVoQVfRJPqvNTCjcTvJB&pp=iAQB
+
+
 ## SpringBoot - How to call a REST API with the Spring RestTemplate class
 #### Liens :
 - Top 1 --> https://www.geeksforgeeks.org/how-to-call-or-consume-external-api-in-spring-boot/
