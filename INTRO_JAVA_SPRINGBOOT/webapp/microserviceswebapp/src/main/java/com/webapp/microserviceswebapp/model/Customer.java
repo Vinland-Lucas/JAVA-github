@@ -1,9 +1,15 @@
 package com.webapp.microserviceswebapp.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+//JsonFilter("monFiltreDynamique")
+@Entity
 public class Customer {
+    @Id
+    @GeneratedValue (strategy = GenerationType.AUTO)
     private int id;
+
     private String name;
     private String firstname;
     private Date birthday;

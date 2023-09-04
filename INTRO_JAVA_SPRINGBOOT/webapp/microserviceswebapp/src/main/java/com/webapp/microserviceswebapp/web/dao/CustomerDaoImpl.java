@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+// ON S'EN SERT PLUS de cette classe --> car on a désormais une BDD et qu'on utilise JPA pour communiquer avec la BDD et effectuer les requêtes
+
 @Repository
 public class CustomerDaoImpl implements CustomerDao {
     public static List<Customer> customers = new ArrayList<>();

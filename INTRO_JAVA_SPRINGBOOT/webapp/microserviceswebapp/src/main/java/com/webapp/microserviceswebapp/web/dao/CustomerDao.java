@@ -4,6 +4,8 @@ import com.webapp.microserviceswebapp.model.Customer;
 
 import java.util.List;
 
+// ON S'EN SERT PLUS DE CETTE INTERFACE --> remplacée par CustomerRepository
+
 public interface CustomerDao {
     List<Customer> findAll();
     Customer findById(int id);
