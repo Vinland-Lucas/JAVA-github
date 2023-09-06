@@ -64,8 +64,9 @@ public class CustomerController {
 
     @ApiOperation(value = "méthode permettant d'update un client dans notre liste ou BDD en utilisant une requête PUT. Cette méthode ne répondra qu'à une requête ayant une URL de type customers/id")
     @PutMapping("/{id}")
-    public Customer modifierUnClient(@RequestBody Customer customer) {
+    public Customer modifierUnClient(@PathVariable int id,@RequestBody Customer customer) {
         validDriverLicense(customer.getDriverLicenseNumber());
+        customer.setId(id);
         return customerRepository.save(customer);
     }
 
